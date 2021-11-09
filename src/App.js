@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 
-
+import Header from './Components/Header'
 import Game from './Components/Game';
 
 import './App.css';
@@ -19,10 +18,7 @@ function App() {
 
   return (
     <Container className="p-3">
-      <Jumbotron>
-        <h1 className="display-4 text-center">Scoreboard</h1>
-        <p className="lead text-center">Game night just got real!</p>
-      </Jumbotron>
+      <Header />
       { socket ? (
         <>
           <div className="chat-container">
